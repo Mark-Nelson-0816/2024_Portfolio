@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Rowdies:wght@300;400;700&display=swap');
+
+/* RESET */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* VARIABLES */
+:root{
+    --BGCOLOR-TOP: #FEFEFE;
+    --BGCOLOR-MID: #77AAFF;
+    --BGCOLOR-BOT: #002b76;
+}
+
+/* UTILITIES */
+.nowrap{
+    white-space: nowrap;
+}
+
+/* ELEMENTS */
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(var(--BGCOLOR-TOP), var(--BGCOLOR-MID), var(--BGCOLOR-BOT));
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    font-family: "Rowdies", sans-serif;
+}
+
+header img{
+    width: clamp(45px, 15vw, 60px);
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid rgb(84, 84, 84);
+}
+header nav{
+    text-decoration: none;
+    width: 60%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* 0.8rem 4vw 1.1rem */
+header li{
+    font-size: clamp(0.8rem, 4vw, 1.1rem);
+    width: fit-content;
+    padding: 0px 4px;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+}
+main section{
+    min-height: calc(100vh - 5rem);
+    border: 1px solid red;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+
+
+
+footer{
+    border: 1px solid black;
+    height: 2rem;
+}
+
+
+/* MODIFIERS */
+#home img{
+    width: min(50vw, 250px);
+    height: auto;
+    border-radius: 50%;
+    border: 5px double black;
+    margin-bottom: 10px;
+}
+#home{
+    justify-content: center;
+}
+#home h1{
+    width: 85%;
+    text-align: center;
+    font-size: 2.3rem;
+    font-family: "Rowdies", sans-serif;
+    margin-bottom: 1.3rem;
+}
+#home p{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 70%;
+    font-family: "Inconsolata", monospace;
+    /* white-space: 1px;
+    letter-spacing: 0.0123rem;
+    line-height: 2.5rem; */
+}
+
+
+
+/* 1025px pc
+481px cp */
