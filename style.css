@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Matemasie&family=Rowdies:wght@300;400;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* RESET */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* VARIABLES */
+:root{
+    --BGCOLOR-TOP: #FEFEFE;
+    --BGCOLOR-MID-TOP: #498cff;
+    --BGCOLOR-MID-BOT: #003083;
+    --BGCOLOR-BOT: #001841;
+}
+
+/* UTILITIES */
+.nowrap{
+    white-space: nowrap;
+}
+
+/* ELEMENTS */
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(var(--BGCOLOR-TOP), var(--BGCOLOR-MID-TOP), var(--BGCOLOR-MID-BOT), var(--BGCOLOR-BOT));
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    font-family: "Rowdies", sans-serif;
+}
+
+header img{
+    width: clamp(45px, 15vw, 60px);
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid rgb(84, 84, 84);
+}
+header nav{
+    text-decoration: none;
+    width: 60%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* 0.8rem 4vw 1.1rem */
+header li{
+    font-size: clamp(0.8rem, 4vw, 1.1rem);
+    width: fit-content;
+    padding: 0px 4px;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+}
+main section{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+
+
+
+footer{
+    border: 1px solid black;
+    height: 2rem;
+}
+
+
+/* MODIFIERS */
+#home{
+    scroll-margin-top: 5rem;
+    justify-content: center;
+}
+#home img{
+    width: min(65vw, 250px);
+    height: auto;
+    border-radius: 50%;
+    border: 5px double black;
+    margin-bottom: 20px;
+    margin-top: -80px;
+}
+#home h1{
+    width: 85%;
+    text-align: center;
+    font-size: 2.3rem;
+    font-family: "Rowdies", sans-serif;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 5px whitesmoke;
+}
+#home p{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 70%;
+    font-family: "Inconsolata", monospace;
+    font-weight: 420;
+}
+
+#about-me{
+    padding: 30px 25px;
+    gap: 3rem;
+}
+#about-me h2{
+    font-family: "Matemasie", sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    color: rgb(206, 228, 255);
+    text-shadow: 2px 2px 7px black;
+}
+#about-me div{
+    padding: 1rem;
+    background-color: #002b76;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px hsl(0, 0%, 0%);
+}
+#about-me p{
+    text-indent: 1rem;
+    font-family: "Inconsolata", monospace;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: whitesmoke;
+    line-height: 1.7rem;
+}
+
+#projects{
+    padding: 30px 25px;
+    gap: 3rem;
+}
+
+#projects h2{
+    font-family: "Matemasie", sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    color: rgb(189, 217, 255);
+    text-shadow: 2px 2px 7px black;
+}
+.projects-container{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    gap: 3rem;
+}
+/* 155px asdada 220px*/
+
+.projects-item{
+    width: clamp(200px, 65vw, 300px);
+    height: clamp(155px, 49vw, 210px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    border-radius: 3px;
+    background-color: #0042b3;
+    padding: 5px;
+    color: whitesmoke;
+    box-shadow: 0px 0px 18px black;
+    text-transform: uppercase;
+    text-align: center;
+}
+.projects-item img{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+
+
+
+/* SCREEN SIZES */
+@media screen and (min-width: 481px) {
+    
+}
+
+
+/* 1025px pc
+481px tablet
+481px cp */
