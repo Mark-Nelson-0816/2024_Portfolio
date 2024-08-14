@@ -72,6 +72,13 @@ header li{
     width: fit-content;
     padding: 0px 4px;
 }
+header a{
+    color: black;
+}
+header a:hover, a:focus{
+    color: rgba(0, 0, 0, 0.678);
+    transform: scale(120%);
+}
 main{
     flex-grow: 1;
     display: flex;
@@ -97,22 +104,37 @@ main h2{
     letter-spacing: 0.2rem;
     text-align: center;
 }
-
-
-
-
 footer{
-    background-color: rgb(2, 0, 48);
-    height: auto;
+    height: 100px;
     width: 100%;
-    padding: 5px;
-    text-align: center;
-    color: whitesmoke;
+    position: relative;
     font-family: "Rowdies", sans-serif;
     text-transform: uppercase;
     font-size: 0.7rem;
-}
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 
+}
+footer .wave{
+    background: url(wave.png);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 1000px 110px;
+    background-repeat: repeat-x;
+    z-index: -1;
+    animation: wave linear 3s infinite;
+}
+@keyframes wave {
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
 
 /* MODIFIERS */
 #home{
@@ -175,8 +197,6 @@ footer{
     justify-content: center;
     gap: 3rem;
 }
-/* 155px asdada 220px*/
-
 .projects-item{
     width: clamp(200px, 65vw, 300px);
     height: clamp(155px, 49vw, 210px);
@@ -198,6 +218,10 @@ footer{
     height: auto;
     border-radius: 5px;
     border: 2px solid #0042b3;
+}
+.projects-item:hover, .projects-item:focus{
+    transform: scale(120%);
+    transition: transform ease 0.4s;
 }
 
 
